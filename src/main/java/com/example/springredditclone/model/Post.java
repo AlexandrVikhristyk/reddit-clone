@@ -8,10 +8,10 @@ import javax.validation.constraints.NotBlank;
 import java.time.Instant;
 
 @Data
-@Entity
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Post {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
