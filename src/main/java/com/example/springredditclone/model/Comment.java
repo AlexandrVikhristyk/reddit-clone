@@ -1,5 +1,6 @@
 package com.example.springredditclone.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
@@ -7,6 +8,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.time.Instant;
 
+@AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity

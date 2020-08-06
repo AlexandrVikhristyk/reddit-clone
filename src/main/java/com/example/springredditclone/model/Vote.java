@@ -1,11 +1,13 @@
 package com.example.springredditclone.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+@AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity
