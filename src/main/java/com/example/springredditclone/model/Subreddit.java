@@ -28,5 +28,3 @@ public class Subreddit {
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 }
-
-
