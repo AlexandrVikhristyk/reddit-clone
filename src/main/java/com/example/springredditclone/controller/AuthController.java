@@ -9,15 +9,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/api/auth")
 @AllArgsConstructor
+@CrossOrigin
 public class AuthController {
 
     private final AuthService authService;
 
     @PostMapping("/signup")
-    public ResponseEntity<String> signup(@RequestBody RegisterRequest registerRequest) {
+    public ResponseEntity<String> signup(@RequestBody @Valid RegisterRequest registerRequest) {
         authService.signup(registerRequest);
         return new ResponseEntity<>("User registration Successful", HttpStatus.OK);
     }
@@ -29,7 +32,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public AuthenticationResponse login(@RequestBody LoginRequest loginRequest) {
+    public AuthenticationResponse login(@RequestBody @Valid LoginRequest loginRequest) {
         return authService.login(loginRequest);
     }
 }
