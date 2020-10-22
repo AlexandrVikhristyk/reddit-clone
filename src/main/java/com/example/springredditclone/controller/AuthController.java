@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@RestController
-@RequestMapping("/api/auth")
-@AllArgsConstructor
 @CrossOrigin
+@RestController
+@AllArgsConstructor
+@RequestMapping("/api/auth")
 public class AuthController {
 
     private final AuthService authService;

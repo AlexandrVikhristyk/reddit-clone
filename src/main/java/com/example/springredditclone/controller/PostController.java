@@ -12,10 +12,10 @@ import java.util.List;
 
 import static org.springframework.http.ResponseEntity.status;
 
-@RestController
-@RequestMapping("/api/posts/")
-@AllArgsConstructor
 @CrossOrigin
+@RestController
+@AllArgsConstructor
+@RequestMapping("/api/posts")
 public class PostController {
 
     private final PostService postService;

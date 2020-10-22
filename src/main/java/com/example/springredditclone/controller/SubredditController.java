@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("/api/subreddit")
-@AllArgsConstructor
 @Slf4j
 @CrossOrigin
+@RestController
+@AllArgsConstructor
+@RequestMapping("/api/subreddit")
 public class SubredditController {
 
     private final SubredditService subredditService;
